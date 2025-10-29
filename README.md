@@ -1,4 +1,4 @@
-# cocolab_messaging
+# Messaging App
 
 A new Flutter project.
 
