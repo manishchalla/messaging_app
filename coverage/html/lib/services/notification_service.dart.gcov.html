@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - lcov.info - lib/services/notification_service.dart</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory lib/services">lib/services</a> - notification_service.dart</td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">lcov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryLo">0.0&nbsp;%</td>
+            <td class="headerCovTableEntry">24</td>
+            <td class="headerCovTableEntry">0</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2025-02-26 11:43:55</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">-</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>              : // lib/services/notification_service.dart</span>
+<span id="L2"><span class="lineNum">       2</span>              : import 'dart:convert';</span>
+<span id="L3"><span class="lineNum">       3</span>              : import 'package:http/http.dart' as http;</span>
+<span id="L4"><span class="lineNum">       4</span>              : import 'package:googleapis_auth/auth_io.dart' as auth;</span>
+<span id="L5"><span class="lineNum">       5</span>              : </span>
+<span id="L6"><span class="lineNum">       6</span>              : class NotificationService {</span>
+<span id="L7"><span class="lineNum">       7</span>              :   // Method to retrieve an access token using the service account</span>
+<span id="L8"><span class="lineNum">       8</span> <span class="tlaUNC">           0 :   Future&lt;String&gt; getAccessToken() async {</span></span>
+<span id="L9"><span class="lineNum">       9</span> <span class="tlaUNC">           0 :     final serviceAccountJson = {</span></span>
+<span id="L10"><span class="lineNum">      10</span>              :       &quot;type&quot;: &quot;service_account&quot;,</span>
+<span id="L11"><span class="lineNum">      11</span>              :       &quot;project_id&quot;: &quot;cocolab-40e6f&quot;,</span>
+<span id="L12"><span class="lineNum">      12</span>              :       &quot;private_key_id&quot;: &quot;8d6a002c1bda257fbd27289c8e816a2c755d0451&quot;,</span>
+<span id="L13"><span class="lineNum">      13</span>              :       &quot;private_key&quot;: &quot;-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCXlJ6deNpoq4q2\npbqhhb0w07tZ3T2FGz3tZqIk3+cVm1N8Un8Bge8YuqSdyGQbX3iYCJPEKOtNMW9b\nXfrqclCRC+iZ0oyB49vhtc8E9F6XeGgt3q54bCnxncLjVm0ccAUDMjN9Xjghpa1P\nO/M07eHYP3HKCZUgDvEcRuPLuJqdF6P7xJ7XYTgf8RyWCx4dbHGE06UyvlwSO7Y9\nJlrWTwFxB90+C/k0tzKFNFCUi69oHEZdtVZrTzVBvXxb/I865F0g4pDXCYVBaBJm\nS4ZDn8TRH2Y7HW6cMXwXKCVY6f9f6KtzzgjLIaCIw/7znTWKow4V7kxsWRuMI2dS\n4HBTOoP7AgMBAAECggEAK/Fa1j3t20A3s2FyLFcwFJKdEp0vs4HFPyhswxHh1QK1\nfioQRaicXufkxxUL6F+R/0klRU2zgSpepPcmwYaoUpRINyexsgoTeWiSflY1geXX\nFc0jeSeqNTBOCkfI0+Cpo1aPVL3WufJkvr6bb/GyclVaMH78q1GJlm/6o9l9gSKi\nENMC9uxET5MnYR+om4jTQqGn9NtI3joh2EaOSS9mTSfVg5ba6U06yveYI+dpNHCB\nAECCL8HFkjf/7A7HPAO5/EuwY3fZc6Sr7h0bfgFqrX1eK/G2cZn35MUEbfpxkmNt\nmI2ciJjL/odcG2il9E8cRQ3X7mjdLZfNTk2VKeiEwQKBgQDLusf+MkCR7yf+Mct+\nK/Fi8rlR1UoytL9SPel4lN64ehDbdCdCa1tIcTiezvgJZva7rrGr3/bhV5Zcoho/\n9M05TwgJcxNKlRk345F+jWosEbFxnpBAM1IODpsT/tXMMwdjzLLX+yjnr/knWxM/\niBJIBqMAJvjUNPVBKIMk0OJDIQKBgQC+eJ8eOi2bwAMc9aZzlT4dcLbj4m3mUru7\nlqvPmNnq7tMTQlztAWI4F5bPaKLtTKyvGEGFbqiakxLX03LwmwGs2qE9cN358uz3\nxDYztEG9ykaZ85xxStUyMniY9U49fEjblp/N8q1aEEZvKLD25mBP3DKc8FQXA+Uz\nOIOYq57/mwKBgEUUamfpBjf1jewFWmjH4auZffkfh282FoF+eMHoSLTovvqKoh1F\nZchki7xdlYEqppLxI1GSOZYjKtryJFB3Y3cBM0pw+KObdtealGUC8nNK9I4AJA2A\n2Vvm2/KlwDzjOKhAaowNn8sfwi30Fcy/COPfTDnq/QiHhHm5kO5U3cPBAoGACHUW\nq6Ltr4LBIKIPuAYicfA1Tr0ZICcASv4PtvIUiwf7u1kxAx0SnWb+vUrqIRtMd6He\nFuyo8+Qf7BFpgyF+24wBqNbAJH8S4pWFypnwaVr385ILmkQ2Xzo6fKA3zycbnRR9\nGAn0hJFAb2MhKHVmRWWDodBSC4uSu8mAnmDQeI0CgYBt6S1fownm3IkSkPgMe0Li\n9Rkn+22T5SEb5SBE/JMS0aeUQwcGvLD0y31QCl6T7NJFcKs4O4//3FliRyMIr1+j\npxhJhrThLWL3N2U91MJczAIuM8rcrBk9IBWm4xI1cIdlvw71hn2WJoZfpAQ9uGQ+\nLuvKw/EmCfIQlEkplhvxdw==\n-----END PRIVATE KEY-----\n&quot;,</span>
+<span id="L14"><span class="lineNum">      14</span>              :       &quot;client_email&quot;: &quot;firebase-adminsdk-fbsvc@cocolab-40e6f.iam.gserviceaccount.com&quot;,</span>
+<span id="L15"><span class="lineNum">      15</span>              :       &quot;client_id&quot;: &quot;103368368045161316967&quot;,</span>
+<span id="L16"><span class="lineNum">      16</span>              :       &quot;auth_uri&quot;: &quot;https://accounts.google.com/o/oauth2/auth&quot;,</span>
+<span id="L17"><span class="lineNum">      17</span>              :       &quot;token_uri&quot;: &quot;https://oauth2.googleapis.com/token&quot;,</span>
+<span id="L18"><span class="lineNum">      18</span>              :       &quot;auth_provider_x509_cert_url&quot;: &quot;https://www.googleapis.com/oauth2/v1/certs&quot;,</span>
+<span id="L19"><span class="lineNum">      19</span>              :       &quot;client_x509_cert_url&quot;: &quot;https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40cocolab-40e6f.iam.gserviceaccount.com&quot;,</span>
+<span id="L20"><span class="lineNum">      20</span>              :       &quot;universe_domain&quot;: &quot;googleapis.com&quot;</span>
+<span id="L21"><span class="lineNum">      21</span>              :     };</span>
+<span id="L22"><span class="lineNum">      22</span>              : </span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaUNC">           0 :     List&lt;String&gt; scopes = [</span></span>
+<span id="L24"><span class="lineNum">      24</span>              :       &quot;https://www.googleapis.com/auth/userinfo.email&quot;,</span>
+<span id="L25"><span class="lineNum">      25</span>              :       &quot;https://www.googleapis.com/auth/firebase.database&quot;,</span>
+<span id="L26"><span class="lineNum">      26</span>              :       &quot;https://www.googleapis.com/auth/firebase.messaging&quot;</span>
+<span id="L27"><span class="lineNum">      27</span>              :     ];</span>
+<span id="L28"><span class="lineNum">      28</span>              : </span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaUNC">           0 :     http.Client client = await auth.clientViaServiceAccount(</span></span>
+<span id="L30"><span class="lineNum">      30</span> <span class="tlaUNC">           0 :       auth.ServiceAccountCredentials.fromJson(serviceAccountJson),</span></span>
+<span id="L31"><span class="lineNum">      31</span>              :       scopes,</span>
+<span id="L32"><span class="lineNum">      32</span>              :     );</span>
+<span id="L33"><span class="lineNum">      33</span>              : </span>
+<span id="L34"><span class="lineNum">      34</span>              :     auth.AccessCredentials credentials =</span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaUNC">           0 :     await auth.obtainAccessCredentialsViaServiceAccount(</span></span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaUNC">           0 :       auth.ServiceAccountCredentials.fromJson(serviceAccountJson),</span></span>
+<span id="L37"><span class="lineNum">      37</span>              :       scopes,</span>
+<span id="L38"><span class="lineNum">      38</span>              :       client,</span>
+<span id="L39"><span class="lineNum">      39</span>              :     );</span>
+<span id="L40"><span class="lineNum">      40</span>              : </span>
+<span id="L41"><span class="lineNum">      41</span> <span class="tlaUNC">           0 :     client.close();</span></span>
+<span id="L42"><span class="lineNum">      42</span> <span class="tlaUNC">           0 :     return credentials.accessToken.data; // Access token returned here</span></span>
+<span id="L43"><span class="lineNum">      43</span>              :   }</span>
+<span id="L44"><span class="lineNum">      44</span>              : </span>
+<span id="L45"><span class="lineNum">      45</span>              :   // Method to send a notification</span>
+<span id="L46"><span class="lineNum">      46</span> <span class="tlaUNC">           0 :   Future&lt;void&gt; sendNotification(String targetFcmToken, String title, String body) async {</span></span>
+<span id="L47"><span class="lineNum">      47</span> <span class="tlaUNC">           0 :     final accessToken = await getAccessToken(); // Retrieve the access token</span></span>
+<span id="L48"><span class="lineNum">      48</span>              :     final fcmEndpoint = 'https://fcm.googleapis.com/v1/projects/cocolab-40e6f/messages:send';</span>
+<span id="L49"><span class="lineNum">      49</span>              : </span>
+<span id="L50"><span class="lineNum">      50</span> <span class="tlaUNC">           0 :     final headers = {</span></span>
+<span id="L51"><span class="lineNum">      51</span>              :       'Content-Type': 'application/json',</span>
+<span id="L52"><span class="lineNum">      52</span> <span class="tlaUNC">           0 :       'Authorization': 'Bearer $accessToken', // Use the access token here</span></span>
+<span id="L53"><span class="lineNum">      53</span>              :     };</span>
+<span id="L54"><span class="lineNum">      54</span>              : </span>
+<span id="L55"><span class="lineNum">      55</span> <span class="tlaUNC">           0 :     final message = {</span></span>
+<span id="L56"><span class="lineNum">      56</span> <span class="tlaUNC">           0 :       'message': {</span></span>
+<span id="L57"><span class="lineNum">      57</span>              :         'token': targetFcmToken, // Target user's FCM token</span>
+<span id="L58"><span class="lineNum">      58</span> <span class="tlaUNC">           0 :         'notification': {</span></span>
+<span id="L59"><span class="lineNum">      59</span>              :           'title': title,</span>
+<span id="L60"><span class="lineNum">      60</span>              :           'body': body,</span>
+<span id="L61"><span class="lineNum">      61</span>              :         },</span>
+<span id="L62"><span class="lineNum">      62</span> <span class="tlaUNC">           0 :         'data': {</span></span>
+<span id="L63"><span class="lineNum">      63</span>              :           'click_action': 'FLUTTER_NOTIFICATION_CLICK', // Optional: Handle notification click</span>
+<span id="L64"><span class="lineNum">      64</span>              :           'type': 'message', // Custom data payload</span>
+<span id="L65"><span class="lineNum">      65</span>              :         },</span>
+<span id="L66"><span class="lineNum">      66</span>              :       }</span>
+<span id="L67"><span class="lineNum">      67</span>              :     };</span>
+<span id="L68"><span class="lineNum">      68</span>              : </span>
+<span id="L69"><span class="lineNum">      69</span>              :     try {</span>
+<span id="L70"><span class="lineNum">      70</span> <span class="tlaUNC">           0 :       final response = await http.post(</span></span>
+<span id="L71"><span class="lineNum">      71</span> <span class="tlaUNC">           0 :         Uri.parse(fcmEndpoint),</span></span>
+<span id="L72"><span class="lineNum">      72</span>              :         headers: headers,</span>
+<span id="L73"><span class="lineNum">      73</span> <span class="tlaUNC">           0 :         body: jsonEncode(message),</span></span>
+<span id="L74"><span class="lineNum">      74</span>              :       );</span>
+<span id="L75"><span class="lineNum">      75</span>              : </span>
+<span id="L76"><span class="lineNum">      76</span> <span class="tlaUNC">           0 :       if (response.statusCode == 200) {</span></span>
+<span id="L77"><span class="lineNum">      77</span> <span class="tlaUNC">           0 :         print(&quot;Notification sent successfully!&quot;);</span></span>
+<span id="L78"><span class="lineNum">      78</span>              :       } else {</span>
+<span id="L79"><span class="lineNum">      79</span> <span class="tlaUNC">           0 :         print(&quot;Failed to send notification: ${response.body}&quot;);</span></span>
+<span id="L80"><span class="lineNum">      80</span>              :       }</span>
+<span id="L81"><span class="lineNum">      81</span>              :     } catch (e) {</span>
+<span id="L82"><span class="lineNum">      82</span> <span class="tlaUNC">           0 :       print(&quot;Error sending notification: $e&quot;);</span></span>
+<span id="L83"><span class="lineNum">      83</span>              :     }</span>
+<span id="L84"><span class="lineNum">      84</span>              :   }</span>
+<span id="L85"><span class="lineNum">      85</span>              : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.3-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>
